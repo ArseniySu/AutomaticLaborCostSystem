@@ -1,0 +1,33 @@
+﻿<Window x:Class="AutomaticLaborCostSystem.CardUsersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutomaticLaborCostSystem"
+        mc:Ignorable="d"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    Title="" Height="600" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="375*"/>
+            <RowDefinition Height="59*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Margin="10" Name="fioUsersTblok"/>
+            
+            <TextBlock Margin="10" Name="RoleUserTblok"/>
+            <TextBlock Margin="10" Name="PhoneUserTblok"/>
+            <TextBlock Margin="10" Name="EmailTblok"/>
+            <TextBlock Margin="10" Name="DepartmentTblok"/>
+            <TextBlock Margin="10" Name="Status_Tblok"/>
+            <TextBlock Margin="10" Name="PostTblok"/>
+            <TextBlock Margin="10" Name="LoginTblok"/>
+            <Button Content="Уволить" Margin="10" Name="DelitBtn" Click="DelitBtn_Click"/>
+            <Button Content="Трудозатраты" Margin="10" Name="laborcostsBtn" Click="laborcostsBtn_Click"/>
+            <Button Content="Сбросить пароль" Margin="10" Name="newPussBTN" Click="newPussBTN_Click"/>
+        </StackPanel>
+
+
+        <Button Content="Назад" Grid.Row="1" Margin="200,10,200,10" Click="Button_Click"/>
+    </Grid>
+</Window>

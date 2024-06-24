@@ -1,0 +1,36 @@
+﻿<Window x:Class="AutomaticLaborCostSystem.DataBase.AddTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutomaticLaborCostSystem.DataBase"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="AddTaskWindow" Height="500" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="467*" />
+            <RowDefinition Height="117*" />
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Margin="50,50,50,0">
+            <TextBox Margin="10" Name="TitleTaskTBox" materialDesign:HintAssist.Hint="Введите название задачи" Style ="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Margin="10" Name="DescriptionsTBox" materialDesign:HintAssist.Hint="Введите описание задачи" Style ="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+         
+            <ComboBox HorizontalAlignment="Left" Margin="10" Width="149"
+            Name="DepartmentCBox"  SelectedValuePath="Id" 
+            DisplayMemberPath="Title"
+    materialDesign:HintAssist.Hint="Отдел "/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1">
+            <Button  Margin="20" Content="Назад"
+                    Name="BackBtn" Click="BackBtn_Click" Width="100"/>
+            <Button  Margin="20" Content="Сохранить" Width="100"
+                       Name="AddSaveBtn" Click="AddSaveBtn_Click"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

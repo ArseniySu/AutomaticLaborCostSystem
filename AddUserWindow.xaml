@@ -1,0 +1,52 @@
+﻿<Window x:Class="AutomaticLaborCostSystem.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutomaticLaborCostSystem"
+        mc:Ignorable="d"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    Title="" Height="600" Width="600" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="467*" />
+            <RowDefinition Height="117*" />
+        </Grid.RowDefinitions>
+
+
+        <StackPanel>
+            <TextBox Margin="10" Name="FnameTBox" materialDesign:HintAssist.Hint="Введите фамилию" Style ="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Margin="10" Name="SnameTBox" materialDesign:HintAssist.Hint="Введите имя" Style ="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Margin="10" Name="MnameTBox" materialDesign:HintAssist.Hint="Введите отчество" Style ="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox HorizontalAlignment="Left" Margin="10" Width="149"
+              Name="RolrCBox"  SelectedValuePath="Id" 
+      DisplayMemberPath="Title"
+      materialDesign:HintAssist.Hint="Роль "/>
+                <ComboBox HorizontalAlignment="Left" Margin="10" Width="149"
+                Name="PostCBox"  SelectedValuePath="Id" 
+        DisplayMemberPath="Title"
+        materialDesign:HintAssist.Hint="Должность "/>
+                <ComboBox HorizontalAlignment="Left" Margin="10" Width="149"
+                Name="DepartCBox"  SelectedValuePath="Id" 
+        DisplayMemberPath="Title"
+        materialDesign:HintAssist.Hint="Отдел "/>
+            </StackPanel>
+            <TextBox Margin="10" Name="PhonTBox" materialDesign:HintAssist.Hint="Введите контактный телефон" Style ="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Margin="10" Name="EmailTBox" materialDesign:HintAssist.Hint="Введите электронную почту" Style ="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBlock Margin="10" Name="LoginTblock" Style="{StaticResource MaterialDesignBody1TextBlock}"/>
+            <TextBlock Margin="10" Name="PussTblock" Style="{StaticResource MaterialDesignBody1TextBlock}"/>
+
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1">
+            <Button  Margin="20" Content="Назад"
+                        Name="BackBtn" Click="BackBtn_Click" Width="100"/>
+            <Button  Margin="20" Content="Сохранить" Width="100"
+                           Name="AddSaveBtn" Click="AddSaveBtn_Click"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

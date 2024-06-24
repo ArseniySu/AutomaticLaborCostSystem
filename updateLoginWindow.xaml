@@ -1,0 +1,22 @@
+﻿<Window x:Class="AutomaticLaborCostSystem.updateLoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutomaticLaborCostSystem"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="" Height="450" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel>
+
+            <TextBox Margin="30,100,30,50" Name="NewLogTBox" materialDesign:HintAssist.Hint="Введите новый логин" Style ="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <Button  Content="Сохранить" Margin="20" Height="50" Width="200"
+                     Name="SaveBTN" Click="SaveBTN_Click"/>
+            <Button Content="Назад" Margin="20" Height="50" Width="200"
+                    Name="BackBtn" Click="BackBtn_Click"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
